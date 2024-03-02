@@ -1,0 +1,59 @@
+
+
+//
+
+ordine funzioni gioco:
+
+
+                 controlKen();              
+                 controlRyu();
+                 
+                 muovimento_onde();
+                 separa();      
+                 ambiente();
+                
+                 
+                 mosseken();
+                 mosseRyu();
+                 
+                 animaz_base_Ryu();
+                 animaz_base_Ken();
+                 
+                 collisione();
+                 contrcoll(); 
+
+
+//
+bugs da risolvere
+aggiustare posizioni onda super // fatto
+inghipppo concettuale con le collisioni dei calci -> metterci una roba piu facile
+aggiustare il problema con le onde cioè x_onda>x_ken+20 non va// fatto
+inserire altezze nei calci e onde cioè se ken è in alto l' onda gli passa sotto
+inserire effetto speciale del pugno
+creare un testo di effetti speciali 
+mettere a posto le collisioni ossia azzerare contatore_ken ogni quando c'e collisione
+trovare un modo per non fare fare mosse a ryu quando ne sta a buscà
+mettere stop_sample ad ogni collisione ossia quando si verifica la collisione la voce deve fermarsi
+
+metterci la difesa contro le onde
+se ryu viene attacato durante shinku la sua immagine sale perchè non è stata impostata la correta altezza 
+dei frames nel caso venga sussato durante questo lasso di tempo.
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+i movimenti laterali sono in player one mecc e da li poi si va in resetta cioè le due funzioni sono collegate
+in resetta a seconda della direzione si decide di ripetere in loop una delle due serie di loop direzionali
+
+
+logica effetti speciali
+1)parto dal dare il tipo di effetto da eseguire + il frame dal quale inizia la combo + i frame dopo i quali inizia l' effetto 
+s= frame combo
+p= delta frames prima di cominciare l' effetto
+imposto quale effetto voglio visualizzare
+enabled_special_effect=true
+
+2) vado in udate effect che viene SEMPRE eseguita come funzione nel loop del giocatore uno
+
+se l' enabled_special_effect == true
+                                      -)a seconda del tipo di effetto posiziono i frame rispetto al corpo del primo giocatore
+									  
+									  -)if(Player_one.initial_frame>=s+p) accendo la flag di ok 
+			 
+chiamo la funzione parti()
+									  
+									  
+									  
+3) vado in parti() in realtà viene eseguita sempre come update effect
+
+  se il flag di ok è attivo 
+                             -) scorro contatore frames effetti
+                             -) imposto show effetc =true
+							 -)controllo fine effetto()
+							 -)imposto eventuali interruzioni
+							 
+							 
+
+4)fine effetto()
+
+   se contatore frames=finale
+                       contatore volte da ripetere++;
+					       -)contatore frames= frames iniziale del tipo di effetto
+
+						   se contatore volte da ripetere=2
+						                           -) enabled_special_effect=false;
+                                                   -)show effect=false
+                                                   -)contatore volte da ripetere=0
+												   
+												   
+l' obbietivo raggiunto è quello di rendere l'effetto indipendente dai frames del giocatore grazie al flag di ok che viene attivato 
+e permette di continuare i frames in modo automatico
+ 
+
+Loop game engine
+
+1) Player_one_moves() : 
+                       -execute_combo
+
+2) Player_one_moves_frames_manage()  :
+                                     -resetta()
+
+3)update_effect();
+							    
+4)check_collision();
+		                        
+5)controllo_timers_one();
+
+
+

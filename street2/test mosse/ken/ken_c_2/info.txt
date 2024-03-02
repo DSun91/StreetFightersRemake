@@ -1,0 +1,27 @@
+        load_frames(effetti,"ken//ken_c_2//e", 18, ".png");
+	
+		load_frames(sprites_ryu[1],"ryu//combo_2//combo_punch", 23, ".png");
+		
+		load_frames(sprites_ken[1],"ken//ken_c_2//a",16, ".png");
+	
+	sequenza effetto:
+	
+	x_effeto=x_ken-70;
+	y_effetto=y_ken-140;
+
+if(ef>7){
+    	x_effeto=x_ken-90;
+	y_effetto=y_ken-170;
+}
+
+    posizioni:
+	
+	
+	 if(counter_ken>8 && counter_ken<13){
+	                   y_ken-=7;
+	                      x_ken+=5;	
+		} 
+		if(counter_ken>13 ){
+	                   y_ken+=7;
+	                      x_ken+=8;	
+		} 

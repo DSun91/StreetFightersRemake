@@ -1,0 +1,5 @@
+tasto a= haduken
+tasto s= pugno kekka
+tasto w= calcio (manca collisione)
+tasti: destra giu avanti (super haduken)
+tasto su salto

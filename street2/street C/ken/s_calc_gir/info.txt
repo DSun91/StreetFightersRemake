@@ -1,0 +1,11 @@
+mossa_ryu calciogiro 
+load_frames(sprites_ryu[1],"ryu//calcio_giro//calc_gir", 16, ".png");
+
+load_frames(sprites_ken[1],"ken//s_calc_gir//ca", num_fram_ken, ".png");
+
+frame ryu inizio == 7
+
+effetto: load_frames(effetti,"effetti speciali//effetto_pugno", 10, ".png");
+
+x_effeto=x_ken-180;
+y_effetto=y_ken-190;
